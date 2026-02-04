@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="imagenes/icono.png">
+    <link rel="stylesheet" href="style.css">
+    <title>My portfolio</title>
+</head>
+<body>
+    <header class="header">
+        <label for="menu" id="menu"><img src="imagenes/menu.png" alt="menu" class="menu"></label>
+        <nav class="header_nav" id="nav">
+            <ul class="header_lista">
+                <li class="header_item --home">
+                     <a href="#home"><span><img class="icono" src="imagenes/home.png" alt=""></span>
+                   home</a>
+                </li>
+                <li class="header_item">
+                    <a href="#project"><span><img class="icono" src="imagenes/project.png" alt=""></span>
+                    project</a>
+                </li>
+                <li class="header_item">
+                    <a href="#about"><span><img class="icono" src="imagenes/about.png" alt=""></span>
+                    about</a>
+                </li>
+                <li class="header_item">
+                    <a href="#contact"><span><img class="icono" src="imagenes/contact.png" alt=""></span>
+                    contact</a>
+                </li>
+            </ul>
+        </nav>
+        <h1>MY Portfolio</h1>
+    </header>
+    <section class="section">
+        <div class="section_home" id="home">
+            <div class="p">
+                <p>Welcome to my portfolio</p>
+            </div>
+        </div>
+        <div class="section_project" id="project">
+            <h2 class="title-project">Project</h2>
+            <div class="contenedor_proyectos">
+                <div class="proyecto">
+                    <h2>Project 1</h2>
+                    <div class="project-informacion">
+                        <p>A page where I recommend essential HTML, CSS, and JavaScript courses, organized by level and designed for those who want to get started in web development. </p>
+                        <a href="https://valente-kevin.github.io/Mini-tinda/" target="_blank">View project</a>
+                    </div>
+                </div>
+                <div class="proyecto">
+                    <h2>Project 2</h2>
+                    <div class="project-informacion">
+                        <p>Digital sales web platform project focused on the marketing of online courses, digital products and complementary services.</p>
+                        <a href="https://valente-kevin.github.io/Navidad-2025/" target="_blank">View project</a>
+                    </div>
+                </div>
+            </div>
+                <h2 class="title-project2">Internship projects</h2>
+            <div class="practica">
+                <div class="proyecto">
+                    <h2>Project</h2>
+                    <div class="project-informacion">
+                        <p>This practice project is the main interface of one of the world's most recognized websites, featuring a responsive design. Developed with HTML & CSS</p>
+                        <a href="https://valente-kevin.github.io/Netflix/" target="_blank">veiw</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section_about" id="about">
+            <div class="section_informacion">
+                <h2 class="title-about">Hi, my name is <b>Kevin</b></h2>
+                <p>Hi! I'm Kevin, a web developer in training with experience creating modern and functional websites.
+                I specialize in HTML & CSS and enjoy transforming ideas into well-structured, fast, and visually appealing websites.
+                I like working with responsive designs, ensuring that every project looks great on computers, tablets, and phones. I also have knowledge of web optimization, code organization, and best practices to keep my projects clean and easy to understand.
+                I'm a curious person and am always learning new technologies to improve my skills. My goal is to continue growing as a developer and build projects that provide real value to people.</p>
+            </div>
+        </div>
+        <div class="section_contact" id="contact">
+            <b>Send message</b><br>
+            <a href="mailto:valentevladimir6@gmail.com" class="email">valentevladimir6@gmail.com</a>
+            <a href="https://wa.me/+593959238651" target="_blank" class="wtsp">WhatsApp</a>
+        </div>
+        <form action="https://formspree.io/f/xeezykgq" method="POST" class="for">
+            <div class="formulario">
+                <label for="nombre">Name <br>
+                    <input type="text" id="nombre" name="nombre" class="input" required>
+                </label>
+                <label for="apellido">last name<br>
+                    <input type="text" id="apellido" name="apellido" class="input">
+                </label>
+                <label for="email">Email <br>
+                    <input type="email" id="email" class="input" name="apellido">
+                </label>
+                </label>
+                <label for="mensage">message<br>
+                    <textarea name="mensage" id="mensage" class="mensage" rows="3" required maxlength="300"></textarea>
+                </label>
+                <input type="submit" class="enviar" value="emviar">
+            </div>
+        </form>
+    </section>
+    <footer>
+      <p>© 2025 Kevin. All rights reserved.</p>
+      <p>Developed with HTML & CSS</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

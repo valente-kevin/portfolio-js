@@ -1,0 +1,360 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --text-color:#f0f9f0;
+    --bg-menu:#fff;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100dvh;
+    overflow: auto;
+    background-color: #213;
+}
+
+
+
+/*-----------seccion de header----*/
+.header{
+    background-color: var(--bg-menu);
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-shadow: 0px .5px .5rem #000;
+    z-index: 10;
+}
+.header h1{
+    margin-right: 5px;
+    font-family: sans-serif;
+    text-shadow: 0px 0px 8px #fff;
+}
+.header_nav{
+    background-color: var(--bg-menu);
+    position: absolute;
+    left: -500px;
+    width: clamp(100px, 20vw, 200px);
+    height: 100dvh;
+    z-index: -1;
+    transition: left .50s;
+}
+.header_nav.activador{
+    left: 0;
+}
+.header_lista{
+    height: 45%;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10px;
+}
+.header_item{
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.header_item:hover{
+    background-color: #000a;
+}
+.header_item:hover span{
+    filter: invert(1000%);
+}
+.header_item:hover a{
+    color: #fff;
+    text-decoration: underline;
+}
+.header li a{
+    text-decoration: none;
+    color: #000;
+}
+
+.checkbox{
+    display: none;
+}
+
+/*-seccion de vienvenida--*/
+.section_home{
+    height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-color);
+    margin: 2rem;
+}
+.p{
+    width:fit-content;
+    height: fit-content;
+    position: relative;
+    width: fit-content;
+}
+.section_home p{
+    font-size: 3rem;
+    text-align: center;
+    margin: 0px 10px;
+    font-weight: 700;
+    z-index: 10;
+    text-shadow: 0px 0px 5px #305;
+    transition: .80s color;
+}
+
+/*--seccion de proyectos--*/
+.section_project{
+    align-items: center;
+    padding: 10px;
+    margin: auto;
+}
+.section_project .presentacion, .presentacion2{
+    font-size: 2rem;
+    font-weight: 800;
+    font-family: sans-serif;
+}
+.title-project, .title-project2{
+    text-align: center;
+    color: var(--text-color);
+}
+.presentacion2{
+    margin-top: 10rem;
+}
+.contenedor_proyectos{
+    width: 70%;
+    display: grid;
+    margin: 10px;
+    gap: 15px;
+}
+.practica{
+    width: 70%;
+    display: grid;
+    margin: 10px;
+    gap: 10px;
+    z-index: 10;
+}
+.proyecto{
+    background-color: #ddd;
+    padding: 10px;
+    border-radius: 10px;
+}
+.proyecto a{
+    color: #fff;
+    text-decoration: none;
+    padding: 0 10px;
+    margin-top: 8px;
+    font-size: 1.2rem;
+    background-color: #000a;
+    border-radius: 10px;
+    transition: .25s padding;
+}
+.proyecto a:hover{
+    padding: 0px 12px;
+}
+
+/*---seccion de sobre mi*/
+.section_about{
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    margin:auto;
+    opacity: 0;
+    z-index: -10;
+    padding: 20px;
+}
+
+.section_informacion{
+    width: 90%;
+}
+
+.title-about{
+    text-align: center;
+    font-size: 2rem;
+    color: var(--text-color);
+    margin-bottom:25px; 
+}
+
+.section_informacion p{
+    line-height: 1.33rem;
+    font-size: 1.3rem;
+    font-family: sans-serif;
+    color: var(--text-color);
+}
+
+/*-------------seccion de contacto--*/
+.section_contact{
+    height:fit-content;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+.email, .wtsp{
+    font-weight: 500;
+    font-size: 1.5rem;
+    width: fit-content;
+    text-decoration: none;
+    padding: 4px;
+    border-radius: 10px;
+
+}
+.email{
+    background-color: #33d;
+    color: #ddd;
+    margin-bottom: 5px;
+}
+.wtsp{
+    background: #7d7;
+    color: #121;
+}
+.section_contact b{
+    font-size: 1.2rem;
+    color: var(--text-color);
+    text-transform:uppercase;
+}
+/*--formulario--*/
+.for{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.formulario{
+    height: fit-content;
+    padding: 0 10px;
+    background-color: #8ada;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.formulario label{
+    margin-top: 10px;
+    font-weight: 600;
+    color: #fff;
+}
+.formulario .input{
+    height: 1.5rem;
+    background-color: inherit;
+    color: #fff;
+}
+.mensage{
+    width: 100%;
+    resize: none;
+    font-size: 1.09rem;
+}
+.enviar{
+    width: 50%;
+    background-color: #9d7;
+    padding: 5px 0;
+    border-radius: 10px;
+    border: none;
+    margin-top: 5px;
+    transition: width .30s;
+}
+.enviar:hover{
+    width: 53%;
+}
+/*---------------seccion de footer---------*/
+footer{
+  background:#111;
+  color:#fff;
+  text-align:center;
+  padding:25px 10px;
+  margin-top:40px;
+  font-size:0.95rem;
+  z-index: 20;
+}
+
+
+
+
+
+.section_about,.section_project,.section_contact{
+    animation: opacidad linear;
+    animation-timeline: view();
+}
+/*-------------------------animaciones------------*/
+@keyframes presentacion1 {
+    0%{
+        left: 0;
+    }
+    95%{
+        opacity: 1;
+    }
+    100%{
+        left: 100%;
+        opacity: 0;
+    }
+}
+@keyframes presentacion2 {
+    0%{
+        left: 0;
+        opacity: 0;
+    }
+    2%{
+        opacity: 1;
+    }
+    95%{
+        opacity: 1;
+    }
+    100%{
+        left: 100%;
+        opacity: 0;
+    }
+}
+@keyframes opacidad {
+    0%{
+        opacity: 0;
+    }
+    25%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+
+
+
+/*---------secccion de media-------*/
+@media(min-width:600px){
+    .header_item{
+        flex-direction: row;
+    }
+    .header_item a{
+        margin: 0px 5px 0px 10px ;
+    }
+}
+
+@media (min-width:750px){
+    .contenedor_proyectos{
+        width: 90%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .practica{
+        width: 90%;
+        grid-template-columns: 50% 50%;
+    }
+    .header li a{
+        font-size: 2rem;
+    }
+}
+@media (min-width:800px) {
+    .section_home{
+        height: 10dvh;
+    }
+    .section_about{
+        height: 50dvh;
+    }
+    .menu-home{
+        display: none;
+    }
+    .--home{
+        display: none;
+    }
+}
